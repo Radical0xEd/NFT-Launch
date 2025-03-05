@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUD'eez 420 Crew - NFT & DAO</title>
+    <link rel="stylesheet" href="Market/style.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.coudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://terminal.jup.ag/main-v3.js'></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1db954;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #1db954;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+        .text-content {
+            width: 50%;
+            text-align: left;
+        }
+        .cta {
+            background: #1db954;
+            padding: 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .form-container {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #1db954;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            padding: 20px;
+            background: #1db954;
+            text-align: center;
+            margin-top: auto;
+        }
+        /* Sidebar style */
+        .w3-sidebar {
+            height: 100vh !important;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            background-color: #f1f1f1;
+            overflow-y: auto;
+            transition: left 0.3s;
+        }
+        .w3-main {
+            margin-left: 0px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        /* Ensures the page content doesn't overlap with the sidebar */
+        .w3-hide-large {
+            margin-top: 83px;
+        }
+        .open-sidebar-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 20px; /* Small font size for the plus sign */
+            color: white;
+            background: #1db954;
+            border: none;
+            padding: 5px;
+            width: 30px; /* Small width */
+            height: 30px; /* Small height */
+            text-align: center;
+            line-height: 30px; /* Vertically center the text */
+            border-radius: 50%;
+            z-index: 999;
+            cursor: pointer;
+        }
+        .open-sidebar-btn:focus {
+            outline: none;
+        }
+   
+</style>
+   
+</head>
+<body>
+    <!-- Open/Close Sidebar Button -->
+    <button class="open-sidebar-btn" onclick="toggleSidebar()">+</button>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="toggleSidebar()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <h3 class="w3-wide"><b>BUD'eez</b></h3>
+        </div>
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+            <a href="#" class="w3-bar-item w3-button">BUD'eez</a>
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#utility" class="w3-bar-item w3-button">Utility</a>
+            <a href="#collab" class="w3-bar-item w3-button">Collaboration</a>
+            <a href="#roadmap" class="w3-bar-item w3-button">Roadmap</a>
+            <a href="#community" class="w3-bar-item w3-button">Community</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="w3-main">
+        <!-- Main Header Section -->
+        <header><b>BUD'eez 420 Crew</b></header>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <div class="text-content">
+                <h2>About Us</h2>
+                <p>BUD'ies aim to connect cannabis enthusiasts through art, creativity, and storytelling. Our mission is to make cannabis culture more approachable and engaging while giving each strain its own character and personality. Stay tuned for the first NFT drop and become a part of the BUD'ies journey!</p>
+            </div>
+        </div>
+
+        <!-- Utility Section -->
+        <div class="section" id="utility">
+            <div class="text-content">
+                <h2>Utility & Benefits</h2>
+                <p>Exclusive perks, staking rewards, and more!</p>
+            </div>
+        </div>
+
+        <!-- Collaboration Section -->
+        <div class="section" id="collab">
+            <div class="text-content">
+                <h2>Collaboration</h2>
+                <p>Partner with us for NFT integration and brand scaling.</p>
+                <div class="cta"><a href="#">Apply for Partnership</a></div>
+            </div>
+        </div>
+
+        <!-- Roadmap Section -->
+        <div class="section" id="roadmap">
+            <div class="text-content">
+                <h2>Roadmap</h2>
+                <p>The BUD'eez brand has big plans, starting with the release of exclusive NFT collections. Each NFT will feature a high-quality digital rendering of a BUD'ies character, complete with unique traits, backstory, and exclusive perks for holders.</p>
+                <h3>What’s Next?</h3><!-- Prepare a div in your <body> for Terminal to render -->
+
+                    <!-- Adjust the width and height to suit your requirements -->
+                    
+                    <div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
+                <ul>
+                    <li>Merchandise: Apparel, collectibles, and accessories featuring your favorite BUD'ies.</li>
+                    <li>Marketing Opportunities: Licensing BUD'ies characters for cannabis-related branding, advertising, and packaging.</li>
+                    <li>Interactive Content: Expanding BUD'ies into the metaverse, offering an immersive experience for fans to connect with their favorite characters.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Prepare a div in your <body> for Terminal to render -->
+
+<!-- Adjust the width and height to suit your requirements -->
+
+<div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
+
+        <!-- Community Section -->
+        <div class="section" id="community">
+            <div class="text-content">
+                <h2>Join Our Community</h2>
+                <div class="form-container">
+                    <h3>Subscribe for Updates</h3>
+                    <input type="email" id="subscribe-email" placeholder="Enter your email">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 BUD'ies 420 Crew | All Rights Reserved
+    </footer>
+
+    <script>
+        // Toggle sidebar open and close
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var mainContent = document.querySelector(".w3-main");
+
+            if (sidebar.style.left === "-250px") {
+                sidebar.style.left = "0";
+                mainContent.style.marginLeft = "250px";
+            } else {
+                sidebar.style.left = "-250px";
+                mainContent.style.marginLeft = "0";
+            }
+        }
+
+        // Subscribe function
+        function subscribe() {
+            var email = document.getElementById('subscribe-email').value;
+            alert('Thank you for subscribing: ' + email);
+        }
+    </script>
+</body>
+</html>
