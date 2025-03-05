@@ -1,9 +1,8 @@
----
----
+
 
 @import "{{ site.theme }}";
 
-<style>
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #121212;
@@ -129,4 +128,4 @@
         .open-sidebar-btn:focus {
             outline: none;
         }
-    </style>
+   
